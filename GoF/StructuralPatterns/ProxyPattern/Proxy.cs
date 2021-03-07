@@ -9,7 +9,6 @@ namespace GoF.StructuralPatterns.ProxyPattern
     {
         public void Run()
         {
-
             Console.WriteLine("Proxy");
             //First way
             Console.WriteLine("First way");
