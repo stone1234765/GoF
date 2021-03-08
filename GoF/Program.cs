@@ -14,6 +14,10 @@ using GoF.StructuralPatterns.FlyweightPattern;
 using GoF.StructuralPatterns.ProxyPattern;
 using System;
 using GoF.BehavioralPatterns.MediatorPattern;
+using GoF.BehavioralPatterns.StrategyPattern;
+using GoF.BehavioralPatterns.MementoPattern;
+using GoF.BehavioralPatterns.TemplateMethodPattern;
+using GoF.BehavioralPatterns.VisitorPattern;
 
 namespace GoF
 {
@@ -50,6 +54,14 @@ namespace GoF
             iterator.Run();
             var mediator = new Mediator();
             mediator.Run();
+            var strategy = new Strategy();
+            strategy.Run();
+            var memento = new Memento();
+            memento.Run();
+            var templateMethod = new TemplateMethod();
+            templateMethod.Run();
+            var visitor = new Visitor();
+            visitor.Run();
         }
     }
 }
