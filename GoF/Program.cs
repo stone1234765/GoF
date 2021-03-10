@@ -18,6 +18,10 @@ using GoF.BehavioralPatterns.StrategyPattern;
 using GoF.BehavioralPatterns.MementoPattern;
 using GoF.BehavioralPatterns.TemplateMethodPattern;
 using GoF.BehavioralPatterns.VisitorPattern;
+using GoF.BehavioralPatterns.CommandPattern;
+using GoF.BehavioralPatterns.ObserverPattern;
+using GoF.BehavioralPatterns.StatePattern;
+using GoF.BehavioralPatterns.InterpreterPattern;
 
 namespace GoF
 {
@@ -62,6 +66,14 @@ namespace GoF
             templateMethod.Run();
             var visitor = new Visitor();
             visitor.Run();
+            var сommand = new Command();
+            сommand.Run();
+            var observer = new Observer();
+            observer.Run();
+            var state = new State();
+            state.Run();
+            var interpreter = new Interpreter();
+            interpreter.Run();
         }
     }
 }
