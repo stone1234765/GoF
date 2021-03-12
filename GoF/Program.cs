@@ -74,6 +74,7 @@ namespace GoF
             state.Run();
             var interpreter = new Interpreter();
             interpreter.Run();
+            observer.Run();
         }
     }
 }

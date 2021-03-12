@@ -36,6 +36,7 @@ namespace GoF.BehavioralPatterns.StatePattern
             myTask.StartProgress();
             Console.WriteLine(myTask.History);
 
+
             //Third way
             Console.WriteLine("Third way");
             var context = new ThirdContext(new ThirdConcreteStateA());

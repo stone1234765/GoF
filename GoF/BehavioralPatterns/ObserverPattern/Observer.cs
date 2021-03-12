@@ -44,11 +44,16 @@ namespace GoF.BehavioralPatterns.ObserverPattern
             var kolya = new Kolya();
             newsNewspaper.AddNews(new News("First news"));
             newsNewspaper.AddNews(new News("Second news"));
-            newsNewspaper.Subscribe(kolya);
+            kolya.Subscribe(newsNewspaper);
+            //newsNewspaper.Subscribe(kolya);
             newsNewspaper.AddNews(new News("Third news"));
+            kolya.UnSubscribe();
             newsNewspaper.AddNews(new News("Fourth news"));
-            newsNewspaper.StopNotify();
+            kolya.Subscribe(newsNewspaper);
             newsNewspaper.AddNews(new News("Fifth news"));
+            newsNewspaper.AddNews(new News("Sixth news"));
+            newsNewspaper.StopNotify();
+            newsNewspaper.AddNews(new News("Seventh news"));
 
             Console.WriteLine();
         }

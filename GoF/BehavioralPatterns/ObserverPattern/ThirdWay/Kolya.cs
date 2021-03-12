@@ -7,9 +7,18 @@ namespace GoF.BehavioralPatterns.ObserverPattern.ThirdWay
     class Kolya : IObserver<News>
     {
         private List<News> ReadNews { get; set; }
+        private IDisposable cancellation;
         public Kolya()
         {
             ReadNews = new List<News>();
+        }
+        public void Subscribe(IObservable<News> observable)
+        {
+            cancellation = observable.Subscribe(this);
+        }
+        public void UnSubscribe()
+        {
+            cancellation.Dispose();
         }
         public void OnCompleted()
         {
