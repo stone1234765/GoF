@@ -22,6 +22,10 @@ using GoF.BehavioralPatterns.CommandPattern;
 using GoF.BehavioralPatterns.ObserverPattern;
 using GoF.BehavioralPatterns.StatePattern;
 using GoF.BehavioralPatterns.InterpreterPattern;
+using GoF.CombinationsPatterns.ChainOfResponsibilityWithCompositeFiles;
+using GoF.CombinationsPatterns.ChainOfResponsibilityWithCommandFiles;
+using GoF.CombinationsPatterns.CompositeWithVisitorFiles;
+using GoF.CombinationsPatterns.CompositeWithIteratorFiles;
 
 namespace GoF
 {
@@ -46,7 +50,7 @@ namespace GoF
             proxy.Run();
             var facade = new Facade();
             facade.Run();
-            var composite = new Composite();
+            var composite = new StructuralPatterns.CompositePattern.Composite();
             composite.Run();
             var flyweight = new Flyweight();
             flyweight.Run();
@@ -64,7 +68,7 @@ namespace GoF
             memento.Run();
             var templateMethod = new TemplateMethod();
             templateMethod.Run();
-            var visitor = new Visitor();
+            var visitor = new BehavioralPatterns.VisitorPattern.Visitor();
             visitor.Run();
             var сommand = new Command();
             сommand.Run();
@@ -74,7 +78,14 @@ namespace GoF
             state.Run();
             var interpreter = new Interpreter();
             interpreter.Run();
-            observer.Run();
+            var chainOfResponsibilityWithComposite = new ChainOfResponsibilityWithComposite();
+            chainOfResponsibilityWithComposite.Run();
+            var chainOfResponsibilityWithComand = new ChainOfResponsibilityWithComand();
+            chainOfResponsibilityWithComand.Run();
+            var compositeWithVisitor = new CompositeWithVisitor();
+            compositeWithVisitor.Run();
+            var compositeWithIterator = new CompositeWithIterator();
+            compositeWithIterator.Run();
         }
     }
 }
